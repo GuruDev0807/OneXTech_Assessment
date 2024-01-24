@@ -133,10 +133,20 @@
   font-family: "Graphik", sans-serif;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 32px; /* 160% */
+  font-weight: 600;
+  line-height: 25px; /* 125% */
   letter-spacing: 0.15px;
   src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Regular-Trial.otf")
+    format("otf");
+}
+
+@font-face {
+  font-family: "Graphik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Semibold-Trial.otf")
     format("otf");
 }
 
@@ -196,6 +206,16 @@
   font-feature-settings: "clig" off, "liga" off;
 }
 
+.heading_h6 {
+  font-family: "Graphik", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25px; /* 125% */
+  letter-spacing: 0.15px;
+  font-feature-settings: "clig" off, "liga" off;
+}
+
 .body_underline1 {
   font-family: "Graphik", sans-serif;
   font-feature-settings: "clig" off, "liga" off;
@@ -203,6 +223,17 @@
   font-style: normal;
   font-weight: 400;
   line-height: 32px; /* 160% */
+  letter-spacing: 0.15px;
+  text-decoration-line: underline;
+}
+
+.body_showmore {
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Graphik", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
   letter-spacing: 0.15px;
   text-decoration-line: underline;
 }

@@ -6,6 +6,10 @@ import { MdStar } from "react-icons/md";
 import { Separator } from "@/components/ui/separator";
 import { dataCollapseDetailsList } from "./data/dataCollapseList";
 import CollapseDetail from "./components/Collapse/CollapseDetail";
+import { dataAboutCar } from "./data/dataAbout";
+import Image from "next/image";
+import TextSpecificationList from "./components/TextList/TextSpecificationList";
+import { dataSpecificationsList } from "./data/dataSpecification";
 
 const Home = () => {
   const [flagSelectedColor, setFlagSelectedColor] = useState(0);
@@ -13,7 +17,7 @@ const Home = () => {
   return (
     <Layout>
       <div className="flex w-full">
-        <div className="flex-1 w-full"></div>
+        <div className="flex-1 w-full bg-[#FBFCFE] justify-center"></div>
         <div className="flex flex-col w-[500px] p-[70px_50px] box-border">
           <div className="flex flex-col w-full">
             <div className="flex w-[50px] h-[24px] justify-center items-center rounded-[64px] bg-[#00F3B920]  text-[#0036C3] body_overline cursor-pointer">
@@ -93,6 +97,55 @@ const Home = () => {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col w-full p-[56px_80px] box-border">
+        <div className="flex flex-col w-full">
+          <div className="heading_h4 text-[rgba(0,0,0,0.87)">
+            About this car
+          </div>
+          <div className=" grid grid-cols-4 gap-x-[120px] mt-[45px]">
+            {dataAboutCar.map((each, index) => {
+              return (
+                <div className="flex items-center" key={index}>
+                  <div className="flex mr-[24px]">
+                    <Image src={each.icon} width={each.width} alt="imgIcon" />
+                  </div>
+                  <div className="body_body1 text-black">{each.text}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="flex flex-col w-full mt-[112px]">
+          <div className="heading_h4 text-[rgba(0,0,0,0.87)">
+            Specifications
+          </div>
+          <div className="w-full grid grid-cols-3 gap-x-[300px] mt-[40px]">
+            <div className="flex flex-col">
+              <TextSpecificationList
+                data={dataSpecificationsList["Exterior"]}
+              />
+            </div>
+            <div className="flex flex-col">
+              <TextSpecificationList
+                data={dataSpecificationsList["Interior"]}
+              />
+            </div>
+            <div className="grid grid-cols-1 gap-y-[56px]">
+              <TextSpecificationList
+                data={dataSpecificationsList["BEV Performance"]}
+              />
+              <TextSpecificationList
+                data={dataSpecificationsList["Charging"]}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex w-full justify-center mt-[70px]">
+          <div className="flex w-[280px] h-[60px] items-center justify-center bg-white rounded-[4px] border-[1px] border-[#0036C3] text-[#0036C3] body_subtitle2 cursor-pointer select-none transition duration-300 hover:text-white hover:bg-[#0036C3]">
+            Show all specifications
           </div>
         </div>
       </div>

@@ -32,11 +32,11 @@ const Header = () => {
           />
         </div>
         <div className="flex items-center select-none">
-          <div className="body_subtitle2 cursor-pointer transition duration-200 hover:drop-shadow-[0px_1px_1px_rgb(0,0,0)]">
+          <div className="body_subtitle2 cursor-pointer transition duration-200 hover:text-[#0036C3]">
             Log In
           </div>
           <div className="body_subtitle2 m-[0px_5px]">/</div>
-          <div className="body_subtitle2 cursor-pointer transition duration-200 hover:drop-shadow-[0px_1px_1px_rgb(0,0,0)]">
+          <div className="body_subtitle2 cursor-pointer transition duration-200 hover:text-[#0036C3]">
             Sign Up
           </div>
         </div>
