@@ -76,7 +76,7 @@
 }
 
 @font-face {
-  font-family: "Graphik";
+  font-family: "Graphik", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -86,9 +86,123 @@
 }
 
 @font-face {
-  font-family: "Graphik";
+  font-family: "Graphik", sans-serif;
+  font-size: 12px;
+  font-style: normal;
   font-weight: 600;
-  src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Semibold-Trial.otf")
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Bold-Trial.otf")
     format("otf");
-  /* Add other font formats if necessary */
+}
+
+@font-face {
+  font-family: "Graphik", sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 43px; /* 126.471% */
+  letter-spacing: 0.25px;
+  src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Regular-Trial.otf")
+    format("otf");
+}
+
+@font-face {
+  font-family: "Graphik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.15px;
+  src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Regular-Trial.otf")
+    format("otf");
+}
+
+@font-face {
+  font-family: "Graphik", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+  src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Medium-Trial.otf")
+    format("otf");
+}
+
+@font-face {
+  font-family: "Graphik", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+  letter-spacing: 0.15px;
+  src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Regular-Trial.otf")
+    format("otf");
+}
+
+.body_subtitle2 {
+  font-family: "Graphik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.body_overline {
+  font-family: "Graphik", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-feature-settings: "clig" off, "liga" off;
+}
+
+.heading_h4 {
+  font-family: "Graphik", sans-serif;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 43px; /* 126.471% */
+  letter-spacing: 0.25px;
+  font-feature-settings: "clig" off, "liga" off;
+}
+
+.body_body1 {
+  font-family: "Graphik", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+  letter-spacing: 0.15px;
+}
+
+.body_body2 {
+  font-family: "Graphik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.15px;
+}
+
+.heading_h5 {
+  font-family: "Graphik", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+  font-feature-settings: "clig" off, "liga" off;
+}
+
+.body_underline1 {
+  font-family: "Graphik", sans-serif;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+  letter-spacing: 0.15px;
+  text-decoration-line: underline;
 }

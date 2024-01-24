@@ -4,15 +4,13 @@ import { useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuLabel,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
 
-export function DropdownSimple({ textHead, data }: any) {
+const DropdownSimple = ({ textHead, data }: any) => {
   const [position, setPosition] = useState("car#01");
   const [clicked, setClickedDown] = useState(false);
 
@@ -21,7 +19,7 @@ export function DropdownSimple({ textHead, data }: any) {
       <DropdownMenu onOpenChange={() => setClickedDown(!clicked)}>
         <DropdownMenuTrigger asChild>
           <div className="flex items-center">
-            <div className="text-[16px] font-semibold not-italic leading-5 mr-[8px]">
+            <div className="body_subtitle2 text-[rgba(0,0,0,0.87)]">
               {textHead}
             </div>
             <div className="flex text-[20px]">
@@ -40,7 +38,9 @@ export function DropdownSimple({ textHead, data }: any) {
                     setClickedDown(true);
                   }}
                 >
-                  {`#${index + 1}` + " " + each}
+                  <div className="body_subtitle2 text-[rgba(0,0,0,0.87)]">
+                    {`#${index + 1}` + " " + each}
+                  </div>
                 </DropdownMenuRadioItem>
               );
             })}
@@ -49,4 +49,6 @@ export function DropdownSimple({ textHead, data }: any) {
       </DropdownMenu>
     </div>
   );
-}
+};
+
+export default DropdownSimple;
