@@ -13,7 +13,7 @@ const TextSpecificationList = ({ data }: any) => {
         })}
       </div>
       {data.flagShowMore ? (
-        <div className="flex  body_showmore text-[#0036C3] mt-[24px] cursor-pointer select-none">
+        <div className="flex  body_showmore text-[#0036C3] mt-[24px] cursor-pointer select-none transition duration-200 hover:text-[#00F3B9]">
           Show more
         </div>
       ) : (

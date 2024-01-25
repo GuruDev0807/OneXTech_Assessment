@@ -81,7 +81,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
-  src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Semibold-Trial.otf")
+  src: url("/assets/fonts/Graphik/Graphik_Family/Graphik-Semibold-Trial.otf")
     format("otf");
 }
 
@@ -93,7 +93,7 @@
   line-height: 16px; /* 133.333% */
   letter-spacing: 1px;
   text-transform: uppercase;
-  src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Bold-Trial.otf")
+  src: url("/assets/fonts/Graphik/Graphik_Family/Graphik-Bold-Trial.otf")
     format("otf");
 }
 
@@ -104,7 +104,7 @@
   font-weight: 600;
   line-height: 43px; /* 126.471% */
   letter-spacing: 0.25px;
-  src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Regular-Trial.otf")
+  src: url("/assets/fonts/Graphik/Graphik_Family/Graphik-Regular-Trial.otf")
     format("otf");
 }
 
@@ -115,7 +115,7 @@
   font-weight: 400;
   line-height: 24px; /* 150% */
   letter-spacing: 0.15px;
-  src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Regular-Trial.otf")
+  src: url("/assets/fonts/Graphik/Graphik_Family/Graphik-Regular-Trial.otf")
     format("otf");
 }
 
@@ -125,7 +125,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 36px;
-  src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Medium-Trial.otf")
+  src: url("/assets/fonts/Graphik/Graphik_Family/Graphik-Medium-Trial.otf")
     format("otf");
 }
 
@@ -136,7 +136,7 @@
   font-weight: 600;
   line-height: 25px; /* 125% */
   letter-spacing: 0.15px;
-  src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Regular-Trial.otf")
+  src: url("/assets/fonts/Graphik/Graphik_Family/Graphik-Regular-Trial.otf")
     format("otf");
 }
 
@@ -146,7 +146,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
-  src: url("../public/fonts/Graphik/Graphik_Family/Graphik-Semibold-Trial.otf")
+  src: url("/assets/fonts/Graphik/Graphik_Family/Graphik-Semibold-Trial.otf")
     format("otf");
 }
 
@@ -236,4 +236,19 @@
   line-height: 20px; /* 142.857% */
   letter-spacing: 0.15px;
   text-decoration-line: underline;
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #dddddd;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0036C3;
+  /* border-radius: 3px; */
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MdAdd } from "react-icons/md";
+import { FaMinus, FaPlus } from "react-icons/fa";
 import {
   Collapsible,
   CollapsibleContent,
@@ -15,7 +15,11 @@ const CollapseDetail = ({ data }: any) => {
           {data.textSubject}
         </div>
         <CollapsibleTrigger asChild>
-          <MdAdd className="w-[24px] h-[24px] text-[rgba(0,0,0,0.54)] cursor-pointer select-none " />
+          {!isOpen ? (
+            <FaPlus className="w-[24px] h-[24px] text-[rgba(0,0,0,0.54)] cursor-pointer select-none " />
+          ) : (
+            <FaMinus className="w-[24px] h-[24px] text-[rgba(0,0,0,0.54)] cursor-pointer select-none " />
+          )}
         </CollapsibleTrigger>
       </div>
 

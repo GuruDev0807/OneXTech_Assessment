@@ -7,27 +7,27 @@ import imgCar06 from "../assets/images/background/cars_png/truck01.png";
 
 export const dataCarsList = [
   {
-    name: "BMW",
+    description: "BMW",
     imgSrc: imgCar01,
   },
   {
-    name: "Audi",
+    description: "Audi",
     imgSrc: imgCar02,
   },
   {
-    name: "Benz",
+    description: "Benz",
     imgSrc: imgCar03,
   },
   {
-    name: "Camero",
+    description: "Camero",
     imgSrc: imgCar04,
   },
   {
-    name: "Ford",
+    description: "Ford",
     imgSrc: imgCar05,
   },
   {
-    name: "Toyota",
+    description: "Toyota",
     imgSrc: imgCar06,
   },
 ];

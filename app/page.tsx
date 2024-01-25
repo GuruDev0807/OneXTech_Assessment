@@ -22,8 +22,7 @@ const Home = () => {
     <Layout>
       <div className="flex w-full">
         <div className="flex-1 flex-col w-full bg-[#FBFCFE]">
-          <div className="flex w-full  mt-[80px]"></div>
-          <div className="flex w-full justify-center mt-[60px]">
+          <div className="flex w-full justify-center mt-[80px]">
             <SlideCarSelect data={dataCarsList} />
           </div>
         </div>
@@ -65,7 +64,11 @@ const Home = () => {
                 {dataColorSelectList.map((each, index) => {
                   return (
                     <div
-                      className={`flex w-[36px] h-[36px] rounded-full justify-center items-center mr-[12px] cursor-pointer select-none  p-[3px] border-[1px] border-[rgba(0,0,0,0)] transition duration-200 hover:border-[#00F3B9]`}
+                      className={`flex w-[36px] h-[36px] rounded-full justify-center items-center mr-[12px] cursor-pointer select-none  p-[3px] border-[1px] ${
+                        flagSelectedColor === index
+                          ? "border-[#00F3B9]"
+                          : "border-[rgba(0,0,0,0)]"
+                      }  transition duration-300 hover:border-[#00F3B9]`}
                       key={index}
                       onClick={() => {
                         setFlagSelectedColor(index);
