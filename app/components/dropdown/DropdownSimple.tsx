@@ -19,7 +19,7 @@ const DropdownSimple = ({ textHead, data }: any) => {
       <DropdownMenu onOpenChange={() => setClickedDown(!clicked)}>
         <DropdownMenuTrigger asChild>
           <div className="flex items-center">
-            <div className="body_subtitle2 text-[rgba(0,0,0,0.87)]">
+            <div className="body_subtitle2 text-[rgba(0,0,0,0.87)] mr-[10px]">
               {textHead}
             </div>
             <div className="flex text-[20px]">

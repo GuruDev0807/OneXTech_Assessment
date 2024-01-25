@@ -1,15 +1,19 @@
 "use client";
 import { useState } from "react";
 import Layout from "@/app/layout/layout";
-import { dataColorSelectList } from "./data/dataColor";
+import Image from "next/image";
 import { MdStar } from "react-icons/md";
 import { Separator } from "@/components/ui/separator";
-import { dataCollapseDetailsList } from "./data/dataCollapseList";
-import CollapseDetail from "./components/Collapse/CollapseDetail";
-import { dataAboutCar } from "./data/dataAbout";
-import Image from "next/image";
-import TextSpecificationList from "./components/TextList/TextSpecificationList";
+
+import { dataColorSelectList } from "./data/dataColor";
 import { dataSpecificationsList } from "./data/dataSpecification";
+import { dataCollapseDetailsList } from "./data/dataCollapseList";
+import { dataAboutCar } from "./data/dataAbout";
+import { dataCarsList } from "./data/dataCar";
+
+import TextSpecificationList from "./components/TextList/TextSpecificationList";
+import CollapseDetail from "./components/Collapse/CollapseDetail";
+import SlideCarSelect from "./components/Slide/SlideCarSelect";
 
 const Home = () => {
   const [flagSelectedColor, setFlagSelectedColor] = useState(0);
@@ -17,7 +21,12 @@ const Home = () => {
   return (
     <Layout>
       <div className="flex w-full">
-        <div className="flex-1 w-full bg-[#FBFCFE] justify-center"></div>
+        <div className="flex-1 flex-col w-full bg-[#FBFCFE]">
+          <div className="flex w-full  mt-[80px]"></div>
+          <div className="flex w-full justify-center mt-[60px]">
+            <SlideCarSelect data={dataCarsList} />
+          </div>
+        </div>
         <div className="flex flex-col w-[500px] p-[70px_50px] box-border">
           <div className="flex flex-col w-full">
             <div className="flex w-[50px] h-[24px] justify-center items-center rounded-[64px] bg-[#00F3B920]  text-[#0036C3] body_overline cursor-pointer">
@@ -84,7 +93,7 @@ const Home = () => {
                 "Tesla believes in accelerating the world's transition to sustainable energy with electric cars."
               }
             </div>
-            <div className="body_underline1 mt-[24px] mb-[40px] text-[#0036C3]">
+            <div className="body_underline1 mt-[24px] mb-[40px] text-[#0036C3] cursor-pointer select-none">
               View the Tesla collection
             </div>
           </div>
