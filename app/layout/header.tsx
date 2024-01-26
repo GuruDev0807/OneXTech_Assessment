@@ -5,6 +5,7 @@ import DropdownLanguage from "../components/Dropdown/DropdownLanguage";
 import { dataEVCarsList, dataEVGuidesList } from "../data/dataEVList";
 import { dataLanguageList } from "../data/dataCountry";
 import { MdMenu } from "react-icons/md";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Header = () => {
   return (
@@ -33,8 +34,50 @@ const Header = () => {
             Sign Up
           </div>
         </div>
-        <div className="ml-[20px] hidden max-pad:flex text-[20px] cursor-pointer select-none">
-          <MdMenu />
+        <div className="ml-[20px] hidden max-[650px]:flex text-[20px] cursor-pointer select-none">
+          <Sheet>
+            <SheetTrigger asChild>
+              <MdMenu />
+            </SheetTrigger>
+            <SheetContent>
+              <div className="flex flex-col w-full">
+                <div className="w-[152px] mr-[32px]  max-laptop:w-[120px] max-laptop:mr-[25px] max-pad:w-[100px] max-pad:mr-[20px] max-mobile:w-[80px] max-mobile:mr-[15px]">
+                  <Image src={imgLogo} alt="imgLogo" />
+                </div>
+                <div className="flex flex-col mt-[30px]">
+                  <div className="flex flex-col">
+                    <div className="body_subtitle2  mb-[15px]">
+                      Find EV Cars
+                    </div>
+                    {dataEVCarsList.map((each, index) => {
+                      return (
+                        <div
+                          className="body_body2 mb-[5px] ml-[20px]"
+                          key={index}
+                        >
+                          {`#${index + 1}` + " " + each}
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <div className="flex flex-col mt-[20px]">
+                    <div className="body_subtitle2  mb-[15px]">EV Guides</div>
+                    {dataEVGuidesList.map((each, index) => {
+                      return (
+                        <div
+                          className="body_body2 mb-[5px] ml-[20px]"
+                          key={index}
+                        >
+                          {`#${index + 1}` + " " + each}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </div>
