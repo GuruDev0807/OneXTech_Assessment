@@ -20,13 +20,13 @@ const Home = () => {
 
   return (
     <Layout>
-      <div className="flex w-full">
-        <div className="flex-1 flex-col w-full bg-[#FBFCFE]">
+      <div className="flex flex-row w-full max-[1023px]:flex-col ">
+        <div className="flex-1 flex-col w-full bg-[#FBFCFE] max-[1023px]:pb-[50px]">
           <div className="flex w-full justify-center mt-[80px]">
             <SlideCarSelect data={dataCarsList} />
           </div>
         </div>
-        <div className="flex flex-col w-[500px] p-[70px_50px] box-border">
+        <div className="flex flex-col w-[500px] p-[70px_50px] box-border max-desktop:w-[400px] max-desktop:p-[50px_30px] max-[1023px]:w-full ">
           <div className="flex flex-col w-full">
             <div className="flex w-[50px] h-[24px] justify-center items-center rounded-[64px] bg-[#00F3B920]  text-[#0036C3] body_overline cursor-pointer">
               NEW
@@ -81,7 +81,9 @@ const Home = () => {
                   );
                 })}
               </div>
-              <div className="flex body_overline text-[rgba(0,0,0,0.87)]">
+              <div
+                className={`flex body_overline ${dataColorSelectList[flagSelectedColor].textColorValue}`}
+              >
                 {dataColorSelectList[flagSelectedColor].colorName}
               </div>
             </div>
@@ -112,19 +114,26 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-full p-[56px_80px] box-border">
+      <div className="flex flex-col w-full p-[56px_80px] box-border max-desktop:p-[30px_30px]">
         <div className="flex flex-col w-full">
           <div className="heading_h4 text-[rgba(0,0,0,0.87)">
             About this car
           </div>
-          <div className=" grid grid-cols-4 gap-x-[120px] mt-[45px]">
+          <div className="flex justify-between w-full mt-[45px] max-[700px]:grid max-[700px]:grid-cols-2 max-[700px]:gap-y-[30px] max-mobile:grid-cols-1">
             {dataAboutCar.map((each, index) => {
               return (
-                <div className="flex items-center" key={index}>
-                  <div className="flex mr-[24px]">
-                    <Image src={each.icon} width={each.width} alt="imgIcon" />
+                <div className="flex items-center cursor-pointer" key={index}>
+                  <div className="flex mr-[24px] max-desktop:mr-[20px] max-laptop:mr-[15px] max-pad:mr-[5px] max-mobile:mr-[20px] w-[30px] justify-center">
+                    <Image
+                      src={each.icon}
+                      width={each.width}
+                      style={{ minWidth: each.width }}
+                      alt="imgIcon"
+                    />
                   </div>
-                  <div className="body_body1 text-black">{each.text}</div>
+                  <div className="body_body1 text-black duration-300 transform hover:drop-shadow-[1px_1px_1px_black]">
+                    {each.text}
+                  </div>
                 </div>
               );
             })}
@@ -134,7 +143,7 @@ const Home = () => {
           <div className="heading_h4 text-[rgba(0,0,0,0.87)">
             Specifications
           </div>
-          <div className="w-full grid grid-cols-3 gap-x-[300px] mt-[40px]">
+          <div className="w-full grid grid-cols-3 gap-x-[300px] mt-[40px] max-w-desktop:gap-x-[200px] max-desktop:gap-x-[150px] max-laptop:gap-x-[100px] max-[900px]:gap-x-[80px] max-spad:grid-cols-1">
             <div className="flex flex-col">
               <TextSpecificationList
                 data={dataSpecificationsList["Exterior"]}

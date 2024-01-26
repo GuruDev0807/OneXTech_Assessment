@@ -16,9 +16,9 @@ const CollapseDetail = ({ data }: any) => {
         </div>
         <CollapsibleTrigger asChild>
           {!isOpen ? (
-            <FaPlus className="w-[24px] h-[24px] text-[rgba(0,0,0,0.54)] cursor-pointer select-none " />
+            <FaPlus className="w-[24px] h-[24px] text-[rgba(0,0,0,0.54)] cursor-pointer select-none max-pad:w-[18px] max-pad:h-[18px]" />
           ) : (
-            <FaMinus className="w-[24px] h-[24px] text-[rgba(0,0,0,0.54)] cursor-pointer select-none " />
+            <FaMinus className="w-[24px] h-[24px] text-[rgba(0,0,0,0.54)] cursor-pointer select-none max-pad:w-[18px] max-pad:h-[18px]" />
           )}
         </CollapsibleTrigger>
       </div>

@@ -7,17 +7,24 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+
     },
+
     extend: {
+      screens: {
+        "mobile": "431px",
+        "spad": "701px",
+        "pad": "769px",
+        "laptop": "1025px",
+        "desktop": "1441px",
+        "w-desktop": "1601px",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
